@@ -1,0 +1,40 @@
+/* ==============================================
+	BUTTON.SCSS
+	Component styles for buttons
+============================================== */
+
+.btn {
+  @include no-appearance;
+  transition:all, 0.1s, linear;
+  width:auto;
+  position:relative;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  user-select: none;
+  padding:0.8em 1em;
+  cursor:pointer !important;
+  outline:0;
+  border:0;
+  @include prox-reg;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.btn-yellow{
+  background:$darkYellow;
+  transition:0.1s all ease-in-out;
+  border:1px solid $darkBlue;
+
+  &:hover{
+    background:$darkBlue;
+    color:$white;
+    transition:0.1s all ease-in-out;
+  }
+}
+
+.btn-gray{
+  background:$gray3;
+  color:$gray2;
+  border:1px solid $darkBlue;
+}

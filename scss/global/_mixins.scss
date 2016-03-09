@@ -1,0 +1,94 @@
+/* ==============================================
+	MIXINS.SCSS
+	A collection of useful mixins
+============================================== */
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// PIXEL TO EM CONVERSION - http://vvv.tobiassjosten.net/css/px-to-em-with-sass/
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+// LINK STYLE OVERRIDE
+@mixin no-link-styles(){
+	text-decoration:none;
+
+	&:hover, &:focus, &:active{
+		text-decoration:none;
+		color:inherit;
+	}
+}
+
+// TRANSITIONS / ANIMATIONS
+@mixin transition($what: all, $length: 1s, $easing: ease-in-out) {
+  transition:$what $length $easing;
+}
+
+// REMOVE MARGIN AND PADDING
+@mixin no-space(){
+	margin:0;
+	padding:0;
+}
+
+// REMOVE ANY CSS APPEARANCE RULES
+@mixin no-appearance(){
+  -webkit-appearance:none !important;
+  -moz-appearance:none !important;
+  appearance:none !important;
+  text-shadow:none !important;
+  outline:none !important;
+  -webkit-box-shadow:none !important;
+  -moz-box-shadow:none !important;
+  box-shadow:none !important;
+  border-radius:0;
+}
+
+// VERTICAL ALIGN
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// =============================================================================
+// Font Face via https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}

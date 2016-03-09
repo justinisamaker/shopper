@@ -1,0 +1,30 @@
+/* ==============================================
+	FONTS.SCSS
+	Include all of your font declarations here
+
+	TODO:
+	- Pare down glyphs included in fontsets if you don't need them. Use Font Prep
+			- https://github.com/briangonzalez/fontprep
+============================================== */
+
+@import "mixins.scss";
+
+// THE BASE FOLDER FOR ALL YOUR FONTS
+$fontDir: '../../fonts';
+
+@include font-face("ProxThin", "#{$fontDir}/proxima-nova-thin-webfont", 100);
+@include font-face("ProxLight", "#{$fontDir}/proxima-nova-light-webfont", 300);
+@include font-face("ProxReg", "#{$fontDir}/proxima-nova-regular-webfont", 400);
+
+
+@mixin prox-thin(){
+  font-family: "ProxThin", Tahoma, Arial, sans-serif;
+}
+
+@mixin prox-light(){
+  font-family: "ProxLight", Tahoma, Arial, sans-serif;
+}
+
+@mixin prox-reg(){
+  font-family: "ProxReg", Tahoma, Arial, sans-serif;
+}

@@ -1,0 +1,23 @@
+/* ==============================================
+	GLOBAL.SCSS
+	Any rules that should affect the CSS at a global level
+
+============================================== */
+
+$susy: (
+	columns: 12,
+	gutters:1/4,
+	math: fluid,
+	output: float,
+	gutter-position:inside,
+);
+
+$small: 500px;
+$medium: 700px;
+$large: 1000px;
+$extra-large: 1400px;
+
+body {
+  @include container();
+  overflow-x:hidden;
+}

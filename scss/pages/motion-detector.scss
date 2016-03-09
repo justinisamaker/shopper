@@ -1,0 +1,99 @@
+@import '../main.scss';
+
+#floor-map{
+  @include span(12);
+  @include no-space;
+  background:$trueBlack;
+
+  svg{
+    @include span(12);
+  }
+}
+
+.room{
+  fill:#039ED5;
+}
+
+.occupied{
+  fill:$darkYellow !important;
+}
+
+/* ==========================================================================
+   ROOM LIST
+   ========================================================================== */
+
+#room_list_container{
+  @include span(12);
+  @include no-space;
+
+  ul{
+    width:100%;
+
+    li{
+      width:100%;
+      height:auto;
+      @include prox-reg;
+      font-size:1.3em;
+      font-weight:700;
+      border-bottom:1px solid $trueBlack;
+      color:$darkBlue;
+      @include span(12);
+      @include no-space;
+      padding:em(15px) em(40px);
+
+      h3{
+        @include span(4);
+        @include no-space;
+      }
+
+      &:nth-child(even){
+        background:$gray3;
+      }
+
+      &:nth-child(odd){
+        background:$medGray;
+      }
+
+      &.active-room{
+        background:$darkYellow;
+      }
+    }
+  }
+}
+
+.room-currently-booked{
+  display:none;
+  cursor:default !important;
+}
+
+.reserve-button, .room-currently-booked{
+  @include span(2);
+  @include push(6);
+}
+
+/* ==========================================================================
+   BREAKPOINTS
+   ========================================================================== */
+
+@include breakpoint($medium){
+  #floor-map{
+    svg{
+      @include span(10);
+      @include push(1);
+    }
+  }
+}
+
+@include breakpoint($extra-large){
+  #floor-map{
+    svg{
+      @include span(8);
+      @include push(2);
+    }
+  }
+}
+
+
+
+
+

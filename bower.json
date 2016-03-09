@@ -1,0 +1,25 @@
+{
+  "name": "shopper",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Justin Smith"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "compass-breakpoint": "~2.6.1",
+    "susy": "~2.2.12"
+  }
+}

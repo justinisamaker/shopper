@@ -1,0 +1,19 @@
+/* ==============================================
+  STYLE.SCSS
+  These files will all be concatenated to the main styles file
+============================================== */
+
+// Import globals
+@import "global/normalize",
+        "bower_components/susy/sass/susy",
+        "bower_components/compass-breakpoint/stylesheets/breakpoint",
+        "global/variables",
+        "global/colors",
+        "global/fonts",
+        "global/breakpoints",
+        "global/grid",
+        "global/global";
+
+// Modules
+@import "modules/button",
+        "modules/header";

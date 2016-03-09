@@ -1,0 +1,16 @@
+/* ==============================================
+  HEADER.SCSS
+============================================== */
+
+#main-header {
+  @include span(12);
+  height:em(43px);
+  background:$trueBlack;
+  border-bottom:1px solid $gray5;
+  padding-top:em(10px);
+}
+
+#shop-logo{
+  width:100px;
+  @include push(1);
+}
