@@ -1,0 +1,37 @@
+{
+  "name": "shopper",
+  "version": "0.0.1",
+  "description": "A suite of tools to interact with bookable meeting rooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinisamaker/shopper.git"
+  },
+  "keywords": [
+    "Arduino",
+    "Particle",
+    "Photon"
+  ],
+  "author": "Justin Smith",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.5.1",
+    "browser-sync": "^2.11.1",
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-mamp": "0.0.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-shell": "^0.5.2",
+    "gulp-svgmin": "^1.2.1",
+    "gulp-uglify": "^1.2.0",
+    "run-sequence": "^1.1.2"
+  }
+}
